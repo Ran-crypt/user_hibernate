@@ -1,12 +1,16 @@
-package org.example.service;
+package org.example.servise;
 
+import org.example.dto.UserRequest;
+import org.example.dto.UserResponse;
 import org.example.entity.User;
+import org.example.mapper.UserMapper;
 import org.example.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class UserService {
 
@@ -17,77 +21,88 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User createUser(String name, String email, Integer age) {
-        logger.info("Creating user: {}", email);
-
+    public UserResponse createUser(UserRequest userRequest) {
+        logger.info("Creating user: {}", userRequest.getEmail());
         // Валидация
-        validateUserData(name, email, age);
+        validateCreateUserData(userRequest.getName(), userRequest.getEmail(), userRequest.getAge());
 
         // Бизнес-правило: проверка уникальности email
-        if (userRepository.findByEmail(email).isPresent()) {
-            throw new IllegalArgumentException("User with email " + email + " already exists");
+        if (userRepository.findByEmail(userRequest.getEmail()).isPresent()) {
+            throw new IllegalArgumentException("User with email " + userRequest.getEmail() + " already exists");
         }
 
-        // Создание и сохранение
-        User user = new User(name, email, age);
+        User user = UserMapper.toEntity(userRequest);
+
         User savedUser = userRepository.save(user);
         logger.info("User created successfully with id: {}", savedUser.getId());
 
-        return savedUser;
+        return UserMapper.toResponse(savedUser);
     }
 
-    public User getUserById(Long id) {
-        logger.info("Fetching user by id: {}", id);
-        return userRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
+    public UserResponse getUserById(UserRequest userRequest) {
+        logger.info("Fetching user by id: {}", userRequest.getId());
+
+        User userById = UserMapper.toEntity(userRequest);
+
+        User findedUserById = userRepository.findById(userById.getId())
+                .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + userById.getId()));
+
+        return UserMapper.toResponse(findedUserById);
     }
 
-    public List<User> getAllUsers() {
+    public List<UserResponse> getAllUsers() {
         logger.info("Fetching all users");
-        return userRepository.findAll();
+        return userRepository.findAll().stream()
+                .map(user -> {
+                    UserResponse r = new UserResponse();
+                    r.setId(user.getId());
+                    r.setName(user.getName());
+                    r.setEmail(user.getEmail());
+                    return r;
+                })
+                .collect(Collectors.toList());
     }
 
-    public User updateUser(Long id, String name, String email, Integer age) {
-        logger.info("Updating user with id: {}", id);
+    public UserResponse updateUser(UserRequest userRequest) {
+        logger.info("Updating user with id: {}", userRequest.getId());
 
         // Проверка существования
-        User existingUser = userRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("User not found with id: " + id));
-
+        User existingUser = userRepository.findById(userRequest.getId())
+                .orElseThrow(() -> new RuntimeException("User not found with id: " + userRequest.getId()));
+        Optional<User> asd1 = userRepository.findById(userRequest.getId());
         // Валидация
-        validateUserData(name, email, age);
+        validateUpdateUserData(userRequest.getName(), userRequest.getEmail(), userRequest.getAge());
 
         // Бизнес-правило: email должен быть уникальным
-        Optional<User> userByEmail = userRepository.findByEmail(email);
-        if (userByEmail.isPresent() && !userByEmail.get().getId().equals(id)) {
-            throw new IllegalArgumentException("Email " + email + " is already taken");
+        if (userRequest.getEmail() != null) {
+            Optional<User> userByEmail = userRepository.findByEmail(userRequest.getEmail());
+            if (userByEmail.isPresent() && !userByEmail.get().getId().equals(userRequest.getId())) {
+                throw new IllegalArgumentException("Email " + userRequest.getEmail() + " is already taken");
+            }
         }
 
-        // Обновление полей
-        existingUser.setName(name);
-        existingUser.setEmail(email);
-        existingUser.setAge(age);
+        UserMapper.updateEntity(existingUser, UserMapper.toEntity(userRequest));
 
         // Сохранение
         User updatedUser = userRepository.update(existingUser);
         logger.info("User updated successfully: {}", updatedUser.getId());
 
-        return updatedUser;
+        return UserMapper.toResponse(updatedUser);
     }
 
-    public void deleteUser(Long id) {
-        logger.info("Deleting user with id: {}", id);
+    public void deleteUser(UserRequest userRequest) {
+        logger.info("Deleting user with id: {}", userRequest.getId());
 
         // Проверка существования
-        if (!userRepository.findById(id).isPresent()) {
-            throw new IllegalArgumentException("User not found with id: " + id);
+        if (!userRepository.findById(userRequest.getId()).isPresent()) {
+            throw new IllegalArgumentException("User not found with id: " + userRequest.getId());
         }
-
-        userRepository.delete(id);
-        logger.info("User deleted successfully: {}", id);
+        User deletedUser = UserMapper.toEntity(userRequest);
+        userRepository.delete(deletedUser.getId());
+        logger.info("User deleted successfully: {}", userRequest.getId());
     }
 
-    private void validateUserData(String name, String email, Integer age) {
+    private void validateCreateUserData(String name, String email, Integer age) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty");
         }
@@ -96,6 +111,35 @@ public class UserService {
         }
         if (age == null || age < 0 || age > 150) {
             throw new IllegalArgumentException("Age must be between 0 and 150");
+        }
+    }
+
+    private void validateUpdateUserData(String name, String email, Integer age) {
+        boolean hasValidField = false;
+
+        if (!name.isEmpty()) {
+            hasValidField = true;
+            if (name.trim().isEmpty()) {
+                throw new IllegalArgumentException("Name cannot be empty");
+            }
+        }
+
+        if (!email.isEmpty()) {
+            hasValidField = true;
+            if (!email.contains("@")) {
+                throw new IllegalArgumentException("Invalid email format");
+            }
+        }
+
+        if (age != null) {
+            hasValidField = true;
+            if (age < 0 || age > 150) {
+                throw new IllegalArgumentException("Age must be between 0 and 150");
+            }
+        }
+
+        if (!hasValidField) {
+            throw new IllegalArgumentException("At least one field (name, email, or age) must be provided for update");
         }
     }
 }

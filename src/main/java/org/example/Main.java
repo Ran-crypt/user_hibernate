@@ -4,6 +4,7 @@ import org.example.api.ConsoleApplication;
 import org.example.controller.UserController;
 import org.example.entity.User;
 import org.example.repository.UserRepository;
+import org.example.servise.UserService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.LoggerFactory;
@@ -17,22 +18,19 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
-    //private static final Scanner scanner = new Scanner(System.in);
-    //private static final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     public static void main(String[] args) {
-        //logger.info("Starting Console Application");
+        logger.info("Starting Console Application");
 
         try {
-            // Initialize Hibernate
+
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
-            // Initialize layers
+
             UserRepository userRepository = new UserRepository(sessionFactory);
-            org.example.service.UserService userService = new org.example.service.UserService(userRepository);
+            UserService userService = new UserService(userRepository);
             UserController userController = new UserController(userService);
 
-            // Start the application
-            userController.start();
+            new ConsoleApplication(userController).start();
 
         } catch (Exception e) {
             logger.error("Application error: {}", e.getMessage(), e);

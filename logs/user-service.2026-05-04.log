@@ -1,0 +1,8 @@
+2026-05-04 06:28:35.472 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-04 06:36:50.968 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-04 06:36:51.753 [main] INFO  o.example.controller.UserController - Starting User Controller
+2026-05-04 06:37:17.970 [main] INFO  org.example.service.UserService - Creating user: bir@mail.ru
+2026-05-04 06:37:18.270 [main] INFO  org.example.service.UserService - User created successfully with id: 5
+2026-05-04 06:37:27.562 [main] INFO  org.example.service.UserService - Deleting user with id: 5
+2026-05-04 06:37:27.579 [main] INFO  org.example.service.UserService - User deleted successfully: 5
+2026-05-04 06:37:32.140 [main] INFO  org.example.Main - Application terminated

@@ -1,0 +1,678 @@
+2026-05-07 00:00:26.940 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:00:27.371 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:00:28.184 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:01:15.018 [main] ERROR org.example.api.ConsoleApplication - Error in controller: For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at org.example.api.ConsoleApplication.readIntInput(ConsoleApplication.java:144)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:114)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:43:07.496 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:43:07.788 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:43:08.545 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:43:20.928 [main] INFO  org.example.servise.UserService - Updating user with id: null
+2026-05-07 00:43:20.951 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:47)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:121)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: java.lang.IllegalArgumentException: id to load is required for loading
+	at org.hibernate.event.spi.LoadEvent.<init>(LoadEvent.java:77)
+	at org.hibernate.event.spi.LoadEvent.<init>(LoadEvent.java:43)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:206)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	... 5 common frames omitted
+2026-05-07 00:43:40.405 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:43:40.742 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:43:41.575 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:45:39.323 [main] INFO  org.example.servise.UserService - Updating user with id: null
+2026-05-07 00:46:24.906 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:46:25.178 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:46:25.930 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:46:33.606 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:46:33.664 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Name cannot be empty
+java.lang.IllegalArgumentException: Name cannot be empty
+	at org.example.servise.UserService.validateUpdateUserData(UserService.java:123)
+	at org.example.servise.UserService.updateUser(UserService.java:74)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:48:17.404 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:48:17.743 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:48:18.564 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:48:22.982 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:48:51.683 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Name cannot be empty
+java.lang.IllegalArgumentException: Name cannot be empty
+	at org.example.servise.UserService.validateUpdateUserData(UserService.java:123)
+	at org.example.servise.UserService.updateUser(UserService.java:74)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:49:36.797 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:49:37.115 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:49:37.926 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:49:44.188 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:49:52.604 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Invalid email format
+java.lang.IllegalArgumentException: Invalid email format
+	at org.example.servise.UserService.validateUpdateUserData(UserService.java:130)
+	at org.example.servise.UserService.updateUser(UserService.java:74)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:50:12.383 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:50:12.700 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:50:13.498 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:50:18.652 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:50:28.567 [main] ERROR org.example.api.ConsoleApplication - Error in controller: At least one field (name, email, or age) must be provided for update
+java.lang.IllegalArgumentException: At least one field (name, email, or age) must be provided for update
+	at org.example.servise.UserService.validateUpdateUserData(UserService.java:142)
+	at org.example.servise.UserService.updateUser(UserService.java:74)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:50:50.899 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:50:51.179 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:50:51.936 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:50:59.571 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:50:59.621 [main] ERROR org.example.api.ConsoleApplication - Error in controller: At least one field (name, email, or age) must be provided for update
+java.lang.IllegalArgumentException: At least one field (name, email, or age) must be provided for update
+	at org.example.servise.UserService.validateUpdateUserData(UserService.java:142)
+	at org.example.servise.UserService.updateUser(UserService.java:74)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-07 00:51:14.386 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:51:14.648 [main] INFO  o.example.repository.UserRepository - User updated successfully: serg@mail.ru
+2026-05-07 00:51:14.649 [main] INFO  org.example.servise.UserService - User updated successfully: 1
+2026-05-07 00:53:00.124 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:53:00.442 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:53:01.259 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:53:11.482 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:54:29.433 [main] INFO  o.example.repository.UserRepository - User updated successfully: serg@mail.ru
+2026-05-07 00:54:29.434 [main] INFO  org.example.servise.UserService - User updated successfully: 1
+2026-05-07 00:54:34.079 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:54:34.387 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:54:35.208 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:54:42.068 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:54:42.402 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:54:43.184 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:54:51.673 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 00:56:34.801 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 00:56:35.105 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 00:56:35.934 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 00:56:45.120 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:06:07.407 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:06:07.712 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:06:08.525 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:06:18.722 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:08:12.656 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:08:12.928 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:08:13.692 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:08:21.480 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:08:21.538 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+2026-05-07 01:08:21.538 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: column u1_0.name, does not exist
+  Позиция: 52
+2026-05-07 01:08:21.541 [main] ERROR o.example.repository.UserRepository - Error finding user by id 1: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:08:21.542 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:47)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	... 5 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:11:35.945 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:11:36.265 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:11:37.091 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:11:46.031 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:11:46.338 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:11:47.135 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:11:58.542 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:12:31.981 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+2026-05-07 01:12:31.982 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: column u1_0.name, does not exist
+  Позиция: 52
+2026-05-07 01:13:03.722 [main] ERROR o.example.repository.UserRepository - Error finding user by id 1: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:13:03.729 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:47)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	... 5 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:13:07.643 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:13:07.953 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:13:08.731 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:13:26.462 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:14:00.475 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+2026-05-07 01:14:00.475 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: column u1_0.name, does not exist
+  Позиция: 52
+2026-05-07 01:14:13.994 [main] ERROR o.example.repository.UserRepository - Error finding user by id 1: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:14:14.001 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:47)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	... 5 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:14:42.868 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:14:43.144 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:14:43.885 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:14:56.428 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:14:56.475 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+2026-05-07 01:14:56.475 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: column u1_0.name, does not exist
+  Позиция: 52
+2026-05-07 01:14:56.477 [main] ERROR o.example.repository.UserRepository - Error finding user by id 1: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:14:56.479 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:47)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:122)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0."name," from Users u1_0 where u1_0.id=?] [ERROR: column u1_0.name, does not exist
+  Позиция: 52] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:189)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:145)
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:117)
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:75)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3726)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3715)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:604)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:590)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:560)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:544)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:207)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:290)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:242)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:111)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:68)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1225)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1213)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:209)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	... 5 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.name, does not exist
+  Позиция: 52
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 40 common frames omitted
+2026-05-07 01:23:37.615 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:23:37.961 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:23:38.799 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:23:51.415 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:23:56.335 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:23:56.703 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:23:57.505 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:24:05.254 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:24:11.156 [main] INFO  o.example.repository.UserRepository - User updated successfully: serg@mail.ru
+2026-05-07 01:24:11.156 [main] INFO  org.example.servise.UserService - User updated successfully: 1
+2026-05-07 01:26:01.419 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:26:01.745 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:26:02.587 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:26:10.918 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:30:21.738 [main] INFO  o.example.repository.UserRepository - User updated successfully: serg@mail.ru
+2026-05-07 01:30:39.733 [main] INFO  org.example.servise.UserService - User updated successfully: 1
+2026-05-07 01:30:42.469 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:30:42.787 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:30:43.586 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:30:50.258 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:32:17.404 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:32:17.705 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:32:18.492 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:32:26.089 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:34:17.275 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:34:17.539 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:34:18.271 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:34:24.544 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:34:24.831 [main] INFO  o.example.repository.UserRepository - User updated successfully: 
+2026-05-07 01:34:24.831 [main] INFO  org.example.servise.UserService - User updated successfully: 1
+2026-05-07 01:36:30.277 [main] INFO  org.example.Main - Starting Console Application
+2026-05-07 01:36:30.612 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-07 01:36:31.418 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-07 01:36:40.687 [main] INFO  org.example.servise.UserService - Updating user with id: 1
+2026-05-07 01:37:08.008 [main] INFO  o.example.repository.UserRepository - User updated successfully: 
+2026-05-07 01:37:08.008 [main] INFO  org.example.servise.UserService - User updated successfully: 1

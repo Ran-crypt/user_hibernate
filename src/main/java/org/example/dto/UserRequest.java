@@ -1,9 +1,11 @@
 package org.example.dto;
 
 public class UserRequest {
+    private Long id;
     private String name;
     private String email;
     private Integer age;
+
 
     public UserRequest() {
     }
@@ -13,6 +15,10 @@ public class UserRequest {
         this.email = email;
         this.age = age;
     }
+
+    public Long getId(){ return id; };
+
+    public void setId(Long id){this.id = id; }
 
     public String getName() {
         return name;

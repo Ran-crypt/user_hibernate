@@ -1,0 +1,132 @@
+2026-05-06 21:39:04.498 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 21:39:04.881 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 21:39:04.921 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:260)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:133)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:500)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:373)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:551)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:404)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:966)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1016)
+	at org.example.HibernateUtil.buildSessionFactory(HibernateUtil.java:12)
+	at org.example.HibernateUtil.<clinit>(HibernateUtil.java:7)
+	at org.example.Main.main(Main.java:26)
+2026-05-06 21:39:35.698 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 21:39:35.971 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 21:39:36.877 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 21:39:54.742 [main] INFO  org.example.servise.UserService - Creating user: fddfhhd
+2026-05-06 21:39:54.742 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Invalid email format
+java.lang.IllegalArgumentException: Invalid email format
+	at org.example.servise.UserService.validateUserData(UserService.java:97)
+	at org.example.servise.UserService.createUser(UserService.java:26)
+	at org.example.controller.UserController.createUser(UserController.java:21)
+	at org.example.api.ConsoleApplication.createUser(ConsoleApplication.java:83)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:33)
+	at org.example.Main.main(Main.java:33)
+2026-05-06 23:49:14.338 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:49:14.613 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:49:15.417 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:50:14.457 [main] INFO  org.example.servise.UserService - Updating user with id: null
+2026-05-06 23:50:14.491 [main] ERROR org.example.api.ConsoleApplication - Error in controller: Failed to find user by id
+java.lang.RuntimeException: Failed to find user by id
+	at org.example.repository.UserRepository.findById(UserRepository.java:43)
+	at org.example.servise.UserService.updateUser(UserService.java:70)
+	at org.example.controller.UserController.updateUser(UserController.java:29)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:121)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+Caused by: java.lang.IllegalArgumentException: id to load is required for loading
+	at org.hibernate.event.spi.LoadEvent.<init>(LoadEvent.java:77)
+	at org.hibernate.event.spi.LoadEvent.<init>(LoadEvent.java:43)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:206)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:160)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:112)
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:149)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1021)
+	at org.example.repository.UserRepository.findById(UserRepository.java:39)
+	... 5 common frames omitted
+2026-05-06 23:52:49.285 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:52:49.578 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:52:50.378 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:53:00.183 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:53:00.468 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:53:01.208 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:53:05.321 [main] INFO  org.example.Main - Application terminated
+2026-05-06 23:54:04.881 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:54:05.196 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:54:05.991 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:55:50.350 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:55:50.651 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:55:51.408 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:56:19.927 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:56:20.246 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:56:21.038 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:57:47.949 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:57:48.267 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:57:49.068 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:57:57.924 [main] ERROR org.example.api.ConsoleApplication - Error in controller: For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at org.example.api.ConsoleApplication.readIntInput(ConsoleApplication.java:144)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:114)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)
+2026-05-06 23:59:05.133 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:59:05.492 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:59:06.305 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:59:24.726 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:59:25.000 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:59:25.749 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:59:48.161 [main] INFO  org.example.Main - Starting Console Application
+2026-05-06 23:59:48.484 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-05-06 23:59:49.287 [main] INFO  org.example.api.ConsoleApplication - Starting User Controller
+2026-05-06 23:59:55.634 [main] ERROR org.example.api.ConsoleApplication - Error in controller: For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at org.example.api.ConsoleApplication.readIntInput(ConsoleApplication.java:144)
+	at org.example.api.ConsoleApplication.updateUser(ConsoleApplication.java:114)
+	at org.example.api.ConsoleApplication.start(ConsoleApplication.java:42)
+	at org.example.Main.main(Main.java:33)

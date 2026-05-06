@@ -10,7 +10,7 @@ public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "whatname,", unique = true, nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
     private String email;
     private Integer age;
@@ -44,11 +44,11 @@ public class User {
 
     public String getName() { return name; }
 
-    public String getEmail(String email) { return email; }
+    public String getEmail() { return email; }
 
-    public Integer getAge(Integer age) { return age; }
+    public Integer getAge() { return age; }
 
-    public LocalDateTime getCreated_at(LocalDateTime created_at) { return created_at; }
+    public LocalDateTime getCreated_at() { return created_at; }
 
     @Override
     public String toString() {
