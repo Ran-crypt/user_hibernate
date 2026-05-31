@@ -1,10 +1,27 @@
 package org.example.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.groups.Default;
+
+import java.time.LocalDateTime;
+
 public class UserRequest {
-    private Long id;
+    @NotBlank(message = "Имя не может быть пустым", groups = OnCreate.class)
     private String name;
+    @NotBlank(message = "Email не может быть пустым", groups = OnCreate.class)
+    @Email(message = "Некорректный email", groups = OnCreate.class)
     private String email;
+    @Min(value = 0, message = "Возраст должен быть >= 0",
+            groups = {Default.class, OnCreate.class, OnUpdate.class}
+    )
+    @Max(value = 150, message = "Возраст должен быть <= 150",
+            groups = {Default.class, OnCreate.class, OnUpdate.class}
+    )
     private Integer age;
+    private LocalDateTime created_at;
 
 
     public UserRequest() {
@@ -14,11 +31,12 @@ public class UserRequest {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.created_at = LocalDateTime.now();
     }
 
-    public Long getId(){ return id; };
-
-    public void setId(Long id){this.id = id; }
+//    public Long getId(){ return id; };
+//
+//    public void setId(Long id){this.id = id; }
 
     public String getName() {
         return name;

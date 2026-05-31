@@ -1,6 +1,9 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+import org.example.dto.OnCreate;
+import org.example.dto.OnUpdate;
 
 import java.time.LocalDateTime;
 
@@ -9,10 +12,24 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Null(groups = OnCreate.class)
+    @NotNull(groups = OnUpdate.class)
     private Long id;
+
     @Column(name = "name", unique = true, nullable = false)
+    @NotBlank(groups = {OnCreate.class, OnUpdate.class})
+    @Size(min = 2, max = 100, groups = {OnCreate.class, OnUpdate.class})
     private String name;
+
+    @Column(unique = true)  // добавьте в БД
+    @NotBlank(groups = {OnCreate.class, OnUpdate.class})
+    @Email(groups = {OnCreate.class, OnUpdate.class})
+    @Size(max = 255, groups = {OnCreate.class, OnUpdate.class})
     private String email;
+
+    @NotNull(groups = {OnCreate.class, OnUpdate.class})
+    @Min(value = 1, groups = {OnCreate.class, OnUpdate.class})
+    @Max(value = 150, groups = {OnCreate.class, OnUpdate.class})
     private Integer age;
     private LocalDateTime created_at;
 

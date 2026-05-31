@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.api.ConsoleApplication;
+//import org.example.api.ConsoleApplication;
 import org.example.controller.UserController;
 import org.example.entity.User;
 import org.example.repository.UserRepository;
@@ -9,6 +9,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
@@ -16,30 +19,36 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+@SpringBootApplication
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
-        logger.info("Starting Console Application");
+        logger.info("Starting Application");
+        SpringApplication.run(Main.class, args);
+//
+//        try {
+//
+//            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+//
+//
+//            UserRepository userRepository = new UserRepository(sessionFactory);
+//            UserService userService = new UserService(userRepository);
+//            UserController userController = new UserController(userService);
+//
+//            new ConsoleApplication(userController).start();
+//
+//        } catch (Exception e) {
+//            logger.error("Application error: {}", e.getMessage(), e);
+//            System.err.println("Failed to start application: " + e.getMessage());
+//        } finally {
+//            // Cleanup
+//            HibernateUtil.shutdown();
+//            logger.info("Application terminated");
+//        }
 
-        try {
-
-            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 
 
-            UserRepository userRepository = new UserRepository(sessionFactory);
-            UserService userService = new UserService(userRepository);
-            UserController userController = new UserController(userService);
 
-            new ConsoleApplication(userController).start();
-
-        } catch (Exception e) {
-            logger.error("Application error: {}", e.getMessage(), e);
-            System.err.println("Failed to start application: " + e.getMessage());
-        } finally {
-            // Cleanup
-            HibernateUtil.shutdown();
-            logger.info("Application terminated");
-        }
 //        Это первичный вариант, оставляю чтобы мог впомнить шаги
 //        boolean running = true;
 //
